@@ -1,0 +1,22 @@
+{
+  "name": "restaurant_page",
+  "version": "1.0.0",
+  "description": "Dynamic Restaurant webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryB/JSRestaurant_page.git"
+  },
+  "author": "Bryan Brady",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryB/JSRestaurant_page/issues"
+  },
+  "homepage": "https://github.com/BryB/JSRestaurant_page#readme",
+  "devDependencies": {
+    "webpack": "^4.28.3"
+  }
+}
