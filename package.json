@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/BryB/JSRestaurant_page#readme",
   "devDependencies": {
+    "css-loader": "^2.1.0",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.0"
   }
