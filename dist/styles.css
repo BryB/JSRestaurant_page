@@ -1,6 +1,6 @@
 .packages {
 
-  margin: 0% 3% 0 5%;
+  margin: 0% 5% 0 5%;
   text-align: center;
   width: 20%;
 }
@@ -20,7 +20,6 @@ body {
 }
 
 #logo {
-  padding-top: 10%;
   width: 45%;
 }
 .header {
@@ -36,7 +35,7 @@ body {
   color: white;
 }
 .footer {
-  padding: 10vh;
+  padding: 20vh;
   height; 100%;
   background-attachment: fixed;
   background-position: center;
@@ -44,7 +43,7 @@ body {
   background-size: cover;
   background-image: url(./imgs/footer.jpg);
   text-align: center;
-  font-size: 50px;
+  font-size: 20px;
   color: white;
 }
 h1 {
