@@ -13,14 +13,14 @@ function aboutPage() {
                           </div>
                           <div class="packages">
                             <img id="logo" src="./imgs/quesadilla.png"/>
-                            <h1 class="tagline">Open 24hrs a day!</h1>
+                            <h1 class="tagline">30+ Tasty Options!</h1>
                             <p>Ut enim ad minim veniam, quis nostrud
                               exercitation ullamco laboris nisi ut
                               aliquip ex ea commodo consequat.</p>
                           </div>
                           <div class="packages">
                             <img id="logo" src="./imgs/dollar.png"/>
-                            <h1 class="tagline">Open 24hrs a day!</h1>
+                            <h1 class="tagline">Budget Friendly!</h1>
                             <p>Duis aute irure dolor in reprehenderit
                              in voluptate velit esse cillum dolore
                              eu fugiat nulla pariatur.
