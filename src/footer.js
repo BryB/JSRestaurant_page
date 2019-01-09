@@ -1,16 +1,11 @@
 
 function initFooter() {
-  let content = document.getElementById('content');
+  let content = document.getElementById('footer');
   content.innerHTML +=
-  `
-    <div id="footer">
-      <h1>Spice Up Your Life!<h1>
-      <br>
-      <p>Built with love and alotta patience</p>
-    </div>
-  `;
-  let navbarStyle = document.getElementById('footer');
-  navbarStyle.setAttribute('style', 'padding: 20vh;' +
+  `<h1>Spice Up Your Life!<h1>
+    <br>
+    <p>Built with love and alotta patience</p>`;
+  content.setAttribute('style', 'padding: 20vh;' +
                               'height; 100%;' +
                               'background-attachment: fixed;' +
                               'background-position: center;' +

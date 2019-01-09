@@ -1,5 +1,5 @@
 function aboutPage() {
-  let content = document.getElementById('content');
+  let content = document.getElementById('page');
 
   content.innerHTML += `<h1 id="title">Taco Bell</h1>
                         <section id="info">

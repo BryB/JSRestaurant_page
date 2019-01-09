@@ -1,24 +1,35 @@
-function initNavigation() {
-  let content = document.getElementById('content');
-  let hover = '.navigation:hover{background-color: #e7425f;' +
-              'text-decoration: underline;}';
+import { aboutPage } from './about.js';
+import { menuPage } from './menu.js';
+import { contactPage } from './contact.js';
 
+
+function dispPage(id, tag) {
+
+  let content = document.getElementById(tag);
+  content.innerHTML = '';
+  if(id === 'about')
+    aboutPage();
+  else if(id === 'menu')
+    menuPage();
+  else
+    contactPage();
+};
+
+function initNavigation() {
+  let content = document.getElementById('navbar');
   content.innerHTML +=
-  `
-    <section id="navbar">
-      <div class="navigation">
-        <h1>About</h1>
-      </div>
-      <div class="navigation">
-        <h1>Menu</h1>
-      </div>
-      <div class="navigation">
-        <h1>Contact</h1>
-      </div>
-    </section>
+  `<div id="about" class="navigation">
+      <h1>About</h1>
+   </div>
+   <div id="menu" class="navigation">
+      <h1>Menu</h1>
+   </div>
+   <div id="contact" class="navigation">
+      <h1>Contact</h1>
+   </div>
   `;
-  let navbarStyle = document.getElementById('navbar');
-  navbarStyle.setAttribute('style', 'display: flex;' +
+
+  content.setAttribute('style', 'display: flex;' +
                               'justify-content: center;' +
                               'background-color: #722182;' +
                               'font-size: 15px;');
@@ -28,7 +39,9 @@ function initNavigation() {
     naviElement[i].setAttribute('style', 'width: 10%;' +
                                 'cursor: pointer;' +
                                 'color: white;');
+    naviElement[i].addEventListener('click', e => {
+      dispPage(naviElement[i].id, 'page');
+    });
   }
-
 }
 export { initNavigation };

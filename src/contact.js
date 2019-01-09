@@ -1,69 +1,87 @@
 function contactPage() {
-  let content = document.getElementById('content');
-
-  content.innerHTML += `<h1 id="title">Contact Us!</h1>
-                        <section id="info">
-                          <div class="packages">
-                            <h1 class="tagline">Address</h1>
-                            <p>1 Glen Bell Way</p>
-                            <p>Irvine, CA 92618</p>
-                          </div>
-                          <div class="packages">
-                            <h1 class="tagline">Email Us!</h1>
-                            <form>
-                            <label id="name-label" for="name">First Name:</label>
-                              <input id="name" type="text" name="name"
-                                placeholder="Enter your name" required>
-                                <label id="name-label" for="name">Last Name:</label>
-                                <input id="name" type="text" name="name"
-                                  placeholder="Enter your name" required>
-                                <label id="name-label" for="name">Email:</label>
-                              <input id="email" type="email" name="email"
-                                placeholder="Enter your email" required>
-                              <label id="name-label" for="name">Comments:</label>
-                              <textarea rows="10" cols="25"
-                                id="suggestions"
-                                name="suggestions"
-                                placeholder="Enter your comments here.">
-                              </textarea>
-                            </form>
-                          </div>
-                          <div class="packages">
-                            <h1 class="tagline">Visit Us!</h1>
-                            <div style="width: 100px">
-                              <iframe width="100%" height="100%"
-                                src="https://maps.google.com/maps?width=600&amp;height=600&amp;hl=en&amp;q=1%20glen%20bell%20way%20Irvine%2CCA+(Taco%20Bell%20HQ)&amp;ie=UTF8&amp;t=&amp;z=12&amp;iwloc=A&amp;output=embed"
-                                frameborder="0"
-                                scrolling="no"
-                                marginheight="0"
-                                marginwidth="0">
-                                <a href="https://www.maps.ie/map-my-route/">
-                                Plot a route map</a>
-                                </iframe>
-                            </div>
-                            <br />
-                          </div>
-                        </section>`;
+  let content = document.getElementById('page');
+  content.innerHTML += ` <section id="container">
+    <h1 id="title">Contact Us!</h1>
+    <form method="GET">
+      <section class="row">
+        <div class="rcol">
+          <label class="label" for="name">Name:</label>
+        </div>
+        <div class="lcol">
+          <input class="textField" name="name" type="text" placeholder="Name" required>
+        </div>
+      </section>
+      <section class="row">
+        <div class="rcol">
+          <label class="label" for="email">Email:</label>
+        </div>
+        <div class="lcol">
+          <input class="textField" type="email" name="email" placeholder="Email" required>
+        </div>
+      </section>
+      <section class="row">
+        <div class="rcol">
+          <label class="label" for="suggestions">Comments:</label>
+        </div>
+        <div class="lcol">
+          <textarea class="textField" rows="10" cols="25" name="suggestions" placeholder="Comments"></textarea>
+        </div>
+      </section>
+      <button id="button" type="submit">Submit</button>
+    </form>
+  </section>`;
   let title = document.getElementById('title');
-  let infoStyle = document.getElementById('info');
-  let packages = document.querySelectorAll('.packages');
-  let taglines = document.querySelectorAll('.tagline');
+  let container = document.getElementById('container');
+  let button = document.getElementById('button');
 
-  infoStyle.setAttribute('style', 'display: flex;' +
-                                  'align-content: center;' +
-                                  'justify-content: center;' +
-                                  'font-size: 20px;');
+  let inputFields = document.querySelectorAll('.textField');
+  let labels = document.querySelectorAll('.label');
+  let rows = document.querySelectorAll('.row');
+  let rcols = document.querySelectorAll('.rcol');
+  let lcols = document.querySelectorAll('.lcol');
+
   title.setAttribute('style', 'font-size: 100px;' +
-                              'color: purple;' +
-                              'text-align: center;');
-  for(let i = 0; i < packages.length; ++i)
+                              'padding-top: 10px;' +
+                              'font-family: arial;' +
+                              'color: purple;');
+
+  container.setAttribute('style', 'border-radius: 5px;' +
+                                  'background-color: #f2f2f2;' +
+                                  'padding: 20px' +
+                                  'margin: 0px 5rem;' +
+                                  'text-align: center;');
+
+  button.setAttribute('style',  'background-color: purple;' +
+                                'color: white;' +
+                                'padding: 12px 20px;' +
+                                'border: none;' +
+                                'border-radius: 4px;' +
+                                'cursor: pointer;');
+  for(let i = 0; i < rows.length; ++i)
+    rows[i].setAttribute('style','display: flex;')
+  for(let i = 0; i < rcols.length; ++i)
+    {
+      rcols[i].setAttribute('style', 'flex: 40%;' +
+                                      'display: inline-block;' +
+                                      'padding: 10px;' +
+                                      'text-align: right;');
+      lcols[i].setAttribute('style', 'flex: 50%;' +
+                                      'display: inline-block;' +
+                                      'padding: 10px;' +
+                                      'text-align: left;');
+    };
+  for(let i = 0; i < inputFields.length; ++i)
   {
-    packages[i].setAttribute('style', 'margin: 0 5%;' +
-                                      'text-align: center;' +
-                                      'width: 20%;');
-    taglines[i].setAttribute('style', 'font-size: 40px;' +
-                                      'color: #e7425f;');
-  }
+    inputFields[i].setAttribute('style', 'padding: 20px 10rem' +
+                                          'border: 1px solid #ccc;' +
+                                          'border-radius: 4px;' +
+                                          'box-sizing: border-box;' +
+                                          'width: 50%');
+    labels[i].setAttribute('style', 'text-align: right;' +
+                                          'font-family: verdana;');
+
+  };
+
 
 }
 
