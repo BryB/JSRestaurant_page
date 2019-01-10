@@ -1,10 +1,10 @@
 function aboutPage() {
   let content = document.getElementById('page');
 
-  content.innerHTML += `<h1 id="title">Taco Bell</h1>
+  content.innerHTML += `<h1 id="title">ABOUT</h1>
                         <section id="info">
                           <div class="packages">
-                            <img id="logo" src="./imgs/menu.png"/>
+                            <img id="logo" src="./imgs/taco.png"/>
                             <h1 class="tagline">Open 24hrs a day!</h1>
                             <p>Lorem ipsum dolor sit amet,
                               consectetur adipiscing elit,
@@ -39,7 +39,6 @@ function aboutPage() {
                                   'justify-content: center;' +
                                   'font-size: 20px;');
   title.setAttribute('style', 'font-size: 100px;' +
-                              'font-family: arial;' +
                               'color: purple;' +
                               'text-align: center;');
   for(let i = 0; i < packages.length; ++i)

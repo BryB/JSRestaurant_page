@@ -1,56 +1,48 @@
 function renderMenu() {
-  let gridLocation = document.getElementById('grid');
-  let grid = [[, , , ,],
-              [, , , ,],
-              [, , , ,],
-              [, , , ,]];
-  for(let i = 0; i < grid.length; ++i)
-    for(let j = 0; j < grid[i].length; ++j)
-      gridLocation.innerHTML += `<div class='.cell'><img src="./imgs/logo" /></div>`;
-
-  let cells = document.querySelectorAll('.cell');
-  for(let i = 0; i < cells.length; ++i)
-    cells[i].setAttribute('style',  'width: 100px;' +
-                                    'background-color: purple;' +
-                                    'border: none;' + 
-                                    'color: white;' +
-                                    'margin: 30px;' +
+  let gridLocation = document.getElementById('row');
+  let counter = 1;
+  gridLocation.setAttribute('style','display: -ms-flexbox;' +
+                                    'display: flex;' +
+                                    '-ms-flex-wrap: wrap;' +
+                                    'flex-wrap: wrap;' +
                                     'text-align: center;' +
-                                    'text-decoration: none;' +
-                                    'display: inline-block;' +
-                                    'font-size: 16px;');
-}
+                                    'margin-bottom: 1rem;');
+  for(let i = 0; i < 3; ++i)
+    gridLocation.innerHTML += `<div class="column"></div>`;
+  let columns = document.querySelectorAll('.column');
 
-}
+  for(let i = 0; i < 3; ++i)
+    for(let j = 0; j < 3; ++j)
+      columns[i].innerHTML += `<img class="pics" src="./imgs/menu/mItem${counter++}.jpg" />`;
+  let pics = document.querySelectorAll('.pics');
+  for(let i = 0; i < columns.length; ++i)
+    columns[i].setAttribute('style','box-sizing: border-box;' +
+                                  '-ms-flex: 25%;' +
+                                  'flex: 25%;' +
+                                  'max-width: 50%;' +
+                                  'padding: 0 4px;' +
+                                  'margin-top: 8px;' +
+                                  'vertical-align: middle');
 
+  for(let i = 0; i < pics.length; ++i)
+    pics[i].setAttribute('style','margin-top: 8px;' +
+                                  'vertical-align: middle;' +
+                                  'width: 60%;');
+}
 function menuPage() {
   let content = document.getElementById('page');
-
-  content.innerHTML += `<h1 id="title">Menu</h1>
-                        <section id="info">
-                          <div id="grid">
-
-                          </div>
-                        </section>`;
+  content.innerHTML += `<h1 id="title">MENU</h1>
+                          <section id="grid">
+                            <div id="row">
+                            </div>
+                          </section>`;
   let title = document.getElementById('title');
-  let infoStyle = document.getElementById('info');
   let grid = document.getElementById('.grid');
 
-  infoStyle.setAttribute('style', 'display: flex;' +
-                                  'align-content: center;' +
-                                  'justify-content: center;' +
-                                  'font-size: 20px;');
   title.setAttribute('style', 'font-size: 100px;' +
-                              'font-family: arial;' +
                               'color: purple;' +
                               'text-align: center;');
-  for(let i = 0; i < grind.length; ++i)
-  {
-    logos[i].setAttribute('style', 'width: 45%;');
-    taglines[i].setAttribute('style', 'font-size: 40px;' +
-                                      'color: #e7425f;');
-  }
-
+  renderMenu();
 }
 
 export { menuPage };

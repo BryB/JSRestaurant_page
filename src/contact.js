@@ -1,7 +1,7 @@
 function contactPage() {
   let content = document.getElementById('page');
-  content.innerHTML += ` <section id="container">
-    <h1 id="title">Contact Us!</h1>
+  content.innerHTML += `<h1 id="title">CONTACT US!</h1>
+  <section id="container">
     <form method="GET">
       <section class="row">
         <div class="rcol">
@@ -43,12 +43,12 @@ function contactPage() {
   title.setAttribute('style', 'font-size: 100px;' +
                               'padding-top: 10px;' +
                               'font-family: arial;' +
-                              'color: purple;');
+                              'color: purple;' +
+                              'text-align: center;');
 
   container.setAttribute('style', 'border-radius: 5px;' +
                                   'background-color: #f2f2f2;' +
-                                  'padding: 20px' +
-                                  'margin: 0px 5rem;' +
+                                  'margin: 0px 5rem 1rem 5rem;' +
                                   'text-align: center;');
 
   button.setAttribute('style',  'background-color: purple;' +
