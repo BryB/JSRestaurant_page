@@ -39,6 +39,7 @@ function aboutPage() {
                                   'justify-content: center;' +
                                   'font-size: 20px;');
   title.setAttribute('style', 'font-size: 100px;' +
+                              'font-family: arial;' +
                               'color: purple;' +
                               'text-align: center;');
   for(let i = 0; i < packages.length; ++i)
