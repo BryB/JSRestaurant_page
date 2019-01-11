@@ -1,8 +1,8 @@
 
 function initHeader () {
-  let content = document.getElementById('header');
-  content.innerHTML += `<img src="./imgs/logo.svg" style="width: 30%; height: 30%"/>`;
-  content.setAttribute('style', 'padding: 25vh;' +
+  let head = document.getElementById('header');
+  head.innerHTML += `<img src="./imgs/logo.svg" style="width: 30%; height: 30%"/>`;
+  head.setAttribute('style', 'padding: 25vh;' +
                         'height: 100%;' +
                         'background-attachment: fixed;' +
                         'background-position: center;' +
